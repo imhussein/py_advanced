@@ -5,4 +5,4 @@ services:
 before_script:
   - pip install docker-compose
 script:
-  - docker-compose sh -c "python manage.py test"
+  - docker-compose run py_adv_app sh -c "python manage.py test"
