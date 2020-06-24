@@ -1,0 +1,14 @@
+version: "3"
+services:
+  py_adv_app:
+    tty: true
+    image: py_advanced
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ".:/app"
+    command: >
+      sh -c "python manage.py runserver"
